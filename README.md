@@ -1,2 +1,2 @@
-# spnn-news-auto
- Optional
+# spnn-news-feed
+RSS automation for SPNN
