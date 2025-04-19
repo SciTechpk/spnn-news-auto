@@ -18,7 +18,7 @@ def clean_html(raw_html):
     soup = BeautifulSoup(raw_html, "html.parser")
     return soup.get_text()
 
-def fetch_feed_items(feed_url, max_items=5):
+def fetch_feed_items(feed_url, max_items=3):
     feed = feedparser.parse(feed_url)
     items = []
     for entry in feed.entries[:max_items]:
@@ -35,8 +35,10 @@ for url in feed_urls:
         all_items.extend(items)
     except Exception as e:
         print(f"Error with feed {url}: {e}")
-from datetime import datetime
+
+# 🔥 IMPORTANT: Timestamp injected
 timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
+
 html_content = f"""
 <!DOCTYPE html>
 <html lang="en">
@@ -54,5 +56,6 @@ html_content = f"""
 </html>
 """
 
+# ✅ Write to file
 with open("news_latest.html", "w", encoding="utf-8") as f:
     f.write(html_content)
