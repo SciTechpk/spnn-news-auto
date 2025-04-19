@@ -1,0 +1,2 @@
+# spnn-news-auto
+ Optional
