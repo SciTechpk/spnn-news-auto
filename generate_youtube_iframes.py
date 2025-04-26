@@ -1,12 +1,13 @@
-import requests
-from datetime import datetime
+from datetime import datetime, timezone
+from googleapiclient.discovery import build
 
-API_KEY = "AIzaSyADRyWjUl0xfBVCkW8r-3YoM_72e5Qso2c"
+# ✅ Your API key
+api_key = "AIzaSyADRyWjUl0xfBVCkW8r-3YoM_72e5Qso2c"
 
-# ✅ Your confirmed playlists
+# ✅ Playlists
 playlists = {
-    "news_psl_live.html": "PLr6o7VvlqFOUo3uuf6sMLA3SwpVXsfF0g",  # 1 PSL live highlight
-    "news_top5_sports.html": "PLrr-WIVYH-XhKGfRbjeddC8S9QwkVazMH",  # 5 Top moments
+    "news_psl_live.html": "PLr6o7VvlqFOUo3uuf6sMLA3SwpVXsfF0g",  # PSL Live Highlight
+    "news_top5_sports.html": "PLrr-WIVYH-XhKGfRbjeddC8S9QwkVazMH",  # Top 5 Moments
     "news_sports_weekly.html": {
         "Cricket": "PLH06VbPakyYUnpMhUFZLp6pbGfYTDf3-S",
         "Football": "PLzn2Kbs0lFDsKiN04bQ2AsobsvV2U7S36",
@@ -14,53 +15,64 @@ playlists = {
     }
 }
 
-def fetch_video_iframes(playlist_id, max_results):
-    url = f"https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults={max_results}&playlistId={playlist_id}&key={API_KEY}"
-    response = requests.get(url).json()
+youtube = build("youtube", "v3", developerKey=api_key)
+
+def fetch_latest_video(playlist_id):
+    request = youtube.playlistItems().list(
+        part="snippet",
+        maxResults=1,
+        playlistId=playlist_id
+    )
+    response = request.execute()
     items = response.get("items", [])
-    iframes = []
-    for item in items:
-        video_id = item["snippet"]["resourceId"]["videoId"]
-        iframe = f'<iframe width="100%" height="315" src="https://www.youtube.com/embed/{video_id}" frameborder="0" allowfullscreen></iframe>'
-        iframes.append(iframe)
-    return iframes
+    if items:
+        video_id = items[0]["snippet"]["resourceId"]["videoId"]
+        return video_id
+    return None
 
-def generate_page(filename, title, iframe_blocks):
-    timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
-    html = f"""<!DOCTYPE html>
+timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+
+# Process simple playlists
+for filename, playlist_id in playlists.items():
+    if isinstance(playlist_id, str):
+        video_id = fetch_latest_video(playlist_id)
+        if video_id:
+            html = f"""<!DOCTYPE html>
 <html>
-<head><meta charset="UTF-8"><title>SPNN - YouTube Videos</title></head>
+<head><meta charset="UTF-8"><title>SPNN Video</title></head>
 <body>
-<h2>📺 {title}</h2>
-<p><em>Updated: {timestamp}</em></p>
-{''.join(iframe_blocks)}
+<h2>▶️ Latest Video</h2>
+<p><em>Last updated: {timestamp}</em></p>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/{video_id}" frameborder="0" allowfullscreen></iframe>
 </body>
-</html>"""
-    with open(filename, "w", encoding="utf-8") as f:
-        f.write(html)
+</html>
+"""
+            with open(filename, "w", encoding="utf-8") as f:
+                f.write(html)
+            print(f"✅ Created {filename}")
+    elif isinstance(playlist_id, dict):
+        # Weekly Sports Special case
+        merged_html = f"""<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>SPNN Weekly Sports Recap</title></head>
+<body>
+<h2>🏆 Weekly Sports Recap</h2>
+<p><em>Last updated: {timestamp}</em></p>
+"""
+        for sport_name, sport_playlist_id in playlist_id.items():
+            video_id = fetch_latest_video(sport_playlist_id)
+            if video_id:
+                merged_html += f"""
+<h3>{sport_name}</h3>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/{video_id}" frameborder="0" allowfullscreen></iframe>
+<br><br>
+"""
+        merged_html += """
+</body>
+</html>
+"""
+        with open(filename, "w", encoding="utf-8") as f:
+            f.write(merged_html)
+        print(f"✅ Created {filename}")
 
-# ✅ Generate PSL Live page (1 long video)
-generate_page(
-    "news_psl_live.html",
-    "PSL 2025 – Live Coverage",
-    fetch_video_iframes(playlists["news_psl_live.html"], 1)
-)
-
-# ✅ Generate Top 5 Moments (5 short clips)
-generate_page(
-    "news_top5_sports.html",
-    "Top 5 Moments – PSL 2025",
-    fetch_video_iframes(playlists["news_top5_sports.html"], 5)
-)
-
-# ✅ Generate Weekly Sports Recap (1 each from 3 sports)
-weekly_iframes = []
-for sport, playlist_id in playlists["news_sports_weekly.html"].items():
-    weekly_iframes.append(f"<h3>{sport} Highlights</h3>")
-    weekly_iframes += fetch_video_iframes(playlist_id, 1)
-
-generate_page(
-    "news_sports_weekly.html",
-    "Weekly Sports Recap",
-    weekly_iframes
-)
+print("🎯 All YouTube video iframe pages generated.")

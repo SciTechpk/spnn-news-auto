@@ -1,23 +1,6 @@
-from datetime import datetime
+from datetime import datetime, timezone
 from bs4 import BeautifulSoup
 import feedparser
-
-# Define topic-specific feeds
-feeds = {
-    "news_psl_only.html": [
-        "https://www.espncricinfo.com/rss/content/story/feeds/0.xml",
-        "https://www.thenews.com.pk/rss/1/1",
-    ],
-    "news_top5_sports_text.html": [
-        "https://www.skysports.com/rss/12040",
-        "https://www.espn.com/espn/rss/news",
-    ],
-    "news_weekly_sports_text.html": [
-        "https://www.espncricinfo.com/rss/content/story/feeds/0.xml",
-        "https://www.skysports.com/rss/12040",
-        "https://www.tennis.com/feed/rss/",
-    ]
-}
 
 def clean_html(raw_html):
     soup = BeautifulSoup(raw_html, "html.parser")
@@ -33,7 +16,23 @@ def fetch_feed_items(feed_url, max_items=5):
         items.append(f"<li><a href='{link}' target='_blank'>{title}</a> <small>({published})</small></li>")
     return items
 
-timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
+timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+
+feeds = {
+    "news_psl_only.html": [
+        "https://www.espncricinfo.com/rss/content/story/feeds/0.xml",
+        "https://www.thenews.com.pk/rss/1/1",
+    ],
+    "news_top5_sports_text.html": [
+        "https://www.skysports.com/rss/12040",
+        "https://www.espn.com/espn/rss/news",
+    ],
+    "news_weekly_sports_text.html": [
+        "https://www.espncricinfo.com/rss/content/story/feeds/0.xml",
+        "https://www.skysports.com/rss/12040",
+        "https://www.tennis.com/feed/rss/",
+    ]
+}
 
 for filename, urls in feeds.items():
     all_items = []

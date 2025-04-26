@@ -1,5 +1,5 @@
 @echo off
-:: ✅ Set working directory explicitly (prevent fallback to System32)
+:: ✅ Set working directory
 cd /d D:\SPNN-Backup\spnn-news-auto
 
 echo 🔄 Generating tickers...
@@ -14,6 +14,9 @@ C:\Windows\py.exe generate_latest_html.py
 
 echo 🧩 Merging targeted video and news into HTML pages...
 C:\Windows\py.exe merge_content.py
+
+echo 🟢 Pulling latest changes from GitHub...
+git pull --rebase
 
 echo 🟢 Adding updated HTML files to Git...
 git add -f cnn_ticker.html market_ticker.html
