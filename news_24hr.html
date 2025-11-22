@@ -1,5 +1,113 @@
 <h2>News Archive – 24 Hours</h2>
-<div style='margin-bottom:20px;'><img src='https://i.dawn.com/large/2025/11/22111717a98dffa.webp' width='100%'><br><a href='https://www.dawn.com/news/1956691/ban-on-gold-trade-lifted-as-commerce-ministry-rescinds-suspension-of-sro760' target='_blank'><strong>Ban on gold trade lifted as commerce ministry rescinds suspension of SRO760</strong></a><br><p>The Ministry of Commerce has rescinded the suspension of  Statutory Regulatory Order (SRO) 760 of 2013, which governs the trade of precious metals, allowing for the import and export of gold, it emerged on Saturday.
+<div style='margin-bottom:20px;'><img src='https://i.dawn.com/large/2025/11/22131718e1607db.gif' width='100%'><br><a href='https://www.dawn.com/news/1956689/ai-deepfakes-the-latest-weapon-in-pakistans-disinfo-wars' target='_blank'><strong>AI deepfakes: The latest weapon in Pakistan’s disinfo wars</strong></a><br><p>I have spent the past few weeks staring at what seem to be digital ghosts; they look human, speak the way we do, and cause anger and despair. But they are not real. They are machines wearing human skin.
+Something is shifting in Pakistan’s social media landscape. It is not merely a rumour. It is not the old cycle of misinformation. It feels darker. Artificial intelligence is reshaping reality frame by frame until the internet resembles a hall of mirrors.
+For me, it began on November 8, when an account called ‘PakVocals’ posted a video on X that claimed to show journalist Benazir Shah dancing in a nightclub. The caption was cruel. It tried to mock her by using derogatory comments against her professional credibility. At the time of writing this piece, that video had garnered more than half a million views.
+It did exactly what it was designed to do: turn a journalist into a target. Mission accomplished!
+To most viewers, the clip probably passed as real, but for me, something felt off.
+When the mask slips
+I opened the clip in DaVinci Resolve — a video editing software that can be downloaded online — and watched it frame by frame because deepfakes are rarely perfect; they usually leave behind little crumbs of evidence.
+And at the 30th frame, I found it!
+For a split second, the skin tone flickered. The outline of the face rippled like water. The mask, it seems, had slipped — a clear sign of face manipulation had thus been identified.
+ 
+
+Screengrab from deepfake video showing clear signs of face manipulation.
+
+I then used Google Lens, another free online tool, to scan multiple screenshots of the deepfake video. The aim was to identify the source of the video, and success was clearly in sight when several search results popped up, one after the other.
+The body in the video didn’t belong to Benazir Shah but to Indian actress Jannat Zubair Rahmani — the clothes were the same, and so was the lighting. The only thing the fakers had changed was the face.
+ 
+
+A screengrab of the original video of Indian actress Jannat Zubair.
+
+On X, Shah called out the deepfake video and noted that the account was followed by the information minister of the incumbent government. That is when the story took a weird turn. ‘PakVocals’ issued an apology, citing religious fear of slander. But despite the pious language, the video is still there, which shows that their true intention was to damage someone’s reputation.
+ 
+
+
+
+
+
+
+On November 18, another X account by the name ‘Princess Hania Shah’ posted a new deepfake of Benazir Shah and accused her of being a “traitor”. This deepfake edit was a lazy attempt, I thought to myself. But the intent, again, was dangerous.
+This time, I didn’t even need editing software. I used Google Lens to put the fake video side-by-side with the original footage I found online. They were perfect mirrors — same moves, same lighting, just a different face. It took five minutes to prove it was a lie. Yet, more than 180,000 people had already watched it.
+ 
+
+A screengrab of the Nov 18 X post.
+
+Fact-checking — a necessity
+X, formerly Twitter, has a system called “Community Notes” designed to flag fake content. But it has failed too many times. Deepfake videos are still up on the social media platform without a warning label.
+What’s worse is that when users asked X’s own AI chatbot, Grok, to verify the videos, it failed to identify them as AI-generated content, revealing the limitations of billion-dollar algorithms. Simply put, we can’t rely on tech giants to protect us. If third-party fact-checkers fail to do their job, nobody will.
+With every passing day, fact-checking is becoming a necessity, especially during times of conflict and wars, because AI-manipulated content is not just consumed by ordinary people but also by mainstream news media.
+During the recent Israel-Iran conflict in mid-2025, a viral post on X allegedly showed analysts at an Israeli news channel fleeing their studio after a purported strike by Iran. While the footage initially seemed convincing, closer inspection revealed ghostly movements, immaculate camera panning and flat audio. But many Pakistani news outlets aired the clip as an authentic event.
+ 
+
+A screengrab of the AI video that went viral during the Israel-Iran war.
+
+After the Benazir Shah deepfakes, just a few hours later, I found another deepfake video. It claimed to show Pakistani soldiers abusing a Baloch woman in a desert setting. The account that posted the clip, namely ‘Yousuf Bahand’, added a taunt: “Some will say this is fake.”
+He was right. It is a fake!
+I went back to the frame-by-frame analysis. The clues were in plain sight. The name tags on the soldiers’ uniforms read “PRMRACCH” and “BAMY” — a classic AI mistake in writing text, hallucinating words while producing gibberish.
+ 
+
+Screengrab of visual inconsistencies in the video.
+
+The clip was crammed with other visual inconsistencies as well. For one, one of the hands of the supposed soldier in the video appeared to be merged into the hands of the woman.
+Not just the video, but the audio too gave it away. When the soldier yelled “damn it”, it came out in a clean American accent, nothing like what you’d expect in that setting. So I ran the clip through FFMPEG, a command-line tool that converts audio or video formats.
+The data showed something you never see in a real desert recording: 0.21 seconds of total silence at the very start. In a windy, open environment, the mic always picks up ambient noise the moment it switches on. That dead air only happens when someone pastes the audio track onto the video later.
+ 
+
+
+And this is not a one-off episode of playing on real issues. I remember, for instance, the wide circulation of clips showing cows drowning during the 2025 Punjab floods. Instead of authentic chaos, the videos presented a sterile calm: unnaturally still, perfectly framed, and entirely lacking the expected camera tremor or human sounds.
+Unfortunately, most viewers appeared to stop at the initial shock of the disaster, arguably failing to question the engineers behind the synthetic content.
+The ‘AI Slop’
+A recent BBC investigation revealed that Pakistan has become a global hub for “AI Slop”. Creators appear to be mass-producing fake content, using real-world settings to spread lies, just to game algorithms and earn money. The incentive is simple: virality pays, truth does not.
+Until early 2024, AI videos were mostly a glitchy novelty shared by enthusiasts, but the landscape arguably shifted with Sora (OpenAI), which created a sense of competition in the market with heavy hitters such as X’s Grok and Google’s Veo.
+But to their credit, Google just stepped in with a partial remedy: its Gemini chatbot can now flag images created with Google’s own AI tools by detecting invisible SynthID watermarks, a technology that embeds invisible watermarks into AI-generated content like images, audio, and text to identify it as machine-created.
+ 
+ 
+
+The tools I used to expose these lies are free. Anyone can use them. But unfortunately, the tools to make these lies are just as accessible. That is the frightening symmetry: anyone with an ulterior motive, whether financial or otherwise, can fabricate a reality, but not everyone will have the incentive to break through such fabrications.
+AI isn’t a futuristic threat anymore. It is a street-level weapon. The next viral clip you see might not be real at all, yet the truth still sits there beneath the distortions. You only have to slow down long enough to find it. Sometimes it is a flicker on a cheek. Sometimes it is a melting hand. Sometimes there is a silence in the waveform.
+The ghosts can be unmasked, but only if we choose to look closely.</p><small>2025-11-22 08:18</small></div><hr><div style='margin-bottom:20px;'><img src='https://i.dawn.com/large/2025/11/22130211a1c2f76.webp' width='100%'><br><a href='https://www.dawn.com/news/1956699/india-trade-unions-condemn-new-labour-codes-plan-nationwide-protests' target='_blank'><strong>India trade unions condemn new labour codes, plan nationwide protests</strong></a><br><p>Ten large Indian trade unions condemned the government’s rollout on Friday of new labour codes, the biggest such overhaul in decades, as a “deceptive fraud” against workers.
+The unions, aligned with parties opposing Prime Minister Narendra Modi, demanded in a statement late on Friday that the laws be withdrawn ahead of nationwide protests they plan to hold on November 26 (Wednesday).
+Modi’s government implemented the four labour codes, approved by parliament five years ago, as it seeks to simplify work rules, some dating to British colonial rule, and liberalise conditions for investment. It says the changes improve worker protections.
+While the new rules offer social security and minimum-wage benefits, they also allow companies to hire and fire workers more easily.
+Unions have strongly opposed the changes, organising multiple nationwide protests over the past five years.
+ 
+
+
+The Labour Ministry did not immediately respond on Saturday to a Reuters request for comment on the union demands. The government has held over a dozen consultations with unions since June 2024, an internal ministry document on the labour codes shows.
+The rules allow longer factory shifts and night work for women, while raising the threshold for firms that need prior approval for layoffs to 300 workers from 100, giving companies greater flexibility in workforce management.
+ 
+
+
+The codes define gig and platform work for the first time, expanding legal and social protection to workers outside traditional employment structures.
+The gig workforce has surged since the pandemic, with more than 23.5 million expected to be employed in the sector by 2030, up from around 10m in 2024/25, according to government think tank NITI Aayog.
+
+ 
+ 
+
+Businesses have long criticised India’s work rules as a drag on manufacturing, which contributes less than a fifth to the country’s nearly $4 trillion economy. Strengthening the manufacturing sector is key to creating jobs in the world’s most populous country.
+But the Association of Indian Entrepreneurs expressed concern that the new rules would significantly increase operating costs for small and midsize enterprises and disrupt business continuity across key sectors. It asked the government for transitional support and flexible implementation mechanisms.
+“The labour codes have been implemented despite strong opposition from the trade unions and it will snatch the workers’ rights, including fixed-term jobs and rights available under the earlier labour laws,” said Amarjeet Kaur, national general secretary of the All India Trade Union Congress (AITUC).
+ 
+
+A labourer uses a pallet truck to shift boxes at the Jan Aushadhi Central Warehouse during an organised media tour to show key operations of the PMBJP, a government scheme that provides generic medicines at affordable prices, in Gurugram, India on Nov 21, 2025. — Reuters
+
+
+Not all unions oppose the overhaul. The right-wing Bharatiya Majdoor Sangh, aligned with Modi's party, called on states to implement them after consultations on some of the codes.
+The labour ministry said the codes — covering wages, industrial relations, social security and occupational safety — would “ensure better wages, safety, social security and welfare for the country’s workforce”.
+The codes will replace 29 existing laws. Indian states are expected to craft rules aligning with the new federal codes covering wages, industrial relations and occupational safety.
+Despite parliamentary approval in 2020, the BJP had until now not been able to implement the laws uniformly across the country due to political resistance and opposition from some unions.
+Modi yesterday defended the overhaul, saying on X that the codes would serve as “a strong foundation for universal social security, minimum and timely payment of wages, safe workplaces and remunerative opportunities”, adding that the reforms would boost job creation and productivity.
+ 
+
+
+
+
+
+</p><small>2025-11-22 08:18</small></div><hr><div style='margin-bottom:20px;'><a href='https://www.geo.tv/latest/634841-turkiye-spymaster-in-delegation-visiting-islamabad-amid-pak-afghan-tensions' target='_blank'><strong>Turkiye spymaster in delegation visiting Islamabad amid Pak-Afghan tensions</strong></a><br><p>
+
+    
+
+A soldier keeps vigil next to a border fence along with Afghanistan’s Paktika province border in Angoor Adda in South Waziristan on October 18, 2017. — AFP/FilePlanned visit was first disclosed by Turkiye President Erdogan.Pakistan-Afghan talks ended this...</p><small>2025-11-22 07:57</small></div><hr><div style='margin-bottom:20px;'><img src='https://i.dawn.com/large/2025/11/22111717a98dffa.webp' width='100%'><br><a href='https://www.dawn.com/news/1956691/ban-on-gold-trade-lifted-as-commerce-ministry-rescinds-suspension-of-sro760' target='_blank'><strong>Ban on gold trade lifted as commerce ministry rescinds suspension of SRO760</strong></a><br><p>The Ministry of Commerce has rescinded the suspension of  Statutory Regulatory Order (SRO) 760 of 2013, which governs the trade of precious metals, allowing for the import and export of gold, it emerged on Saturday.
 In May, the government had enacted the 60-day import and export ban on precious metals and gemstones to stabilise its foreign exchange reserves. The restriction was also linked to the military conflict with India as a potential strategy to limit the flow of precious metals via Dubai.
 In a fresh SRO2198 dated November 21, the Ministry of Commerce rescinded its May directives for the ban, thereby allowing the import and export of gold and other precious metals.
 The ministry further said the period of suspension so far under SRO760 was “accordingly condoned, thereby enabling exporters to avail the mandatory entitlement period of 120 days under the entrustment scheme”.
@@ -530,95 +638,7 @@ White House press secretary Karoline Leavitt told a news briefing that Secretary
 The acceleration in US diplomacy comes at a time when Ukrainian troops are on the back foot on the battlefield and Zelensky’s government has been undermined by a corruption scandal. Parliament fired two cabinet ministers on Wednesday.
 Ukrainian forces repelled Russia’s initial assault on Kyiv in 2022, but their attempted counteroffensive failed in 2023.
 With the war’s fourth winter approaching, Russian troops occupy almost one-fifth of Ukraine and have been grinding slowly forward along a 1,200-kilometre front line while bombarding Ukrainian energy supplies.
-Russia says it has taken control of the city of Kupiansk in northeastern Ukraine and most of Pokrovsk in the east, its first big prizes in nearly two years. Kyiv denies losing control of those cities but has acknowledged that Russia is advancing.</p><small>2025-11-21 18:54</small></div><hr><div style='margin-bottom:20px;'><img src='https://i.dawn.com/large/2025/11/212240154994c49.webp' width='100%'><br><a href='https://www.dawn.com/news/1956525/ttap-pti-stage-demonstrations-against-27th-amendment-across-kp-and-punjab' target='_blank'><strong>TTAP, PTI stage demonstrations against 27th Amendment across KP and Punjab</strong></a><br><p>The PTI and the Tehreek Tahafuz Ayeen-i-Pakistan (TTAP) on Friday staged demonstrations across Khyber Pakhtunkhwa and Punjab in protest of the 27th Constitutional Amendment and the mistreatment of PTI founder Imran Khan’s sisters outside Rawalpindi’s Adiala Jail.
-Concurrently, the PTI and TTAP staged a protest in Karachi, where police detained about half a dozen people to prevent them from moving towards the demonstration’s scheduled venue.
-In KP, the demonstrations were staged on the directives of the PTI’s KP President Junaid Akbar, after the TTAP made the decision to march. They were held at the district level, where charged PTI workers chanted slogans against institutions while holding portraits of the party founder.
-In Peshawar, dozens of PTI workers held a protest outside the Peshawar Press Club, which was addressed by Provincial Minister for Local Government Meena Khan Afridi, Member of the National Assembly (MNA) Sher Ali Arbab and the PTI’s Peshawar district president Irfan Saleem.
- 
-
-
-
-
-
-
-In his speech, Afridi said that Imran has presented two options to the leadership of TTAP.
-“The first option is to hold negotiations with the powers that be to sort out all outstanding issues,” he said, adding that if the negotiations failed, the second option would be peaceful protest across the country.
- 
- 
-
-He assailed the powers of immunity granted through the 27th Constitutional Amendment, which defines that the president and military leadership cannot be prosecuted.
-“Immunity is un-Islamic, unethical and in violation of traditions,” he said.
-“The 1973 Constitution was a social contract between the masses, the state, government and institutions, which ended with the 27th Constitutional Amendment.”
-He urged the Insaf Lawyers Forum to challenge the 27th Amendment and stage a protest against it with the support of the public.
-Saleem added that the party’s struggle for the supremacy of the constitution, the rule of law and human rights would not stop till achieving their goals.
-He slammed security agencies for allegedly detaining Pashtoon Tahafuz Movement (PTM) workers following the conclusion of the grand jirga at the KP Assembly on November 12.
-“Only the elected people have the right to rule Pakistan, while those imposed on the nation have no rights and are ruling the country illegally.”
-Demonstrations in KP’s districts
-In Swabi, PTI workers claimed that the incumbent federal government has been working for the establishment since coming to power through a fraudulent election.
-The party staged a protest on Swabi-Jahangira road in Tordhir against the 27th Constitutional Amendment, claiming that it was passed to strengthen “powerful personalities” instead of common people.
- 
-
-
-
-
-
-
-Speaking on the occasion, MNA Shahram Khan Tarakai said that terrorists have never been tried in the courts of Islamabad, but PTI leaders have been tried there to stop them from serving the people.
-Meanwhile, in Mohmand’s Mian Mandi Bazar, PTI workers staged a large protest against the recently-passed Amendment, calling it a “direct assault on Pakistan’s constitution, judicial subjugation and extension scheme”.
-Party workers, led by district leaders including MNA Sajid Khan and MPA Muhammad Israr, waved black flags and chanted “Withdraw the 27th Amendment” and “Long Live the Constitution”.
- 
-
-
-
-
-
-
-“The 27th Amendment is a dangerous conspiracy against the nation’s constitution. It was passed to block the Pakistan Tehreek-e-Insaf from the elections,” claimed MNA Khan.
-MPA Israr said in his address, “The mistreatment of Imran Khan’s sisters the day before yesterday is beyond tolerance. The establishment wants to completely dismantle the PTI. “
-He added that through Form 47, the rulers are stripping away judicial independence and hollowing out national institutions.
-In Battagram, the PTI, led by Battagram chapter president Niaz Muhammad Khan Trand, staged a protest on the Karakoram Highway. The demonstration featured party workers holding placards with slogans against the federal government.
-Trand stated that Pakistan was founded in the name of Islam, emphasising accountability for all actions. He criticised the PML-N government for “placing itself above the law through the 27th Amendment”, which he deemed unacceptable.
- 
-
-
-
-
-
-
-He further claimed the amendment aimed “to conceal the government’s mismanagement, corruption and administrative failures”.
-Niaz accused the PML-N government of attempting to sideline PTI, its leadership, and workers, asserting that PTI remains the most popular and acceptable party in Pakistan.
-Meanwhile, in Bajaur, scores of PTI workers and supporters attended the demonstration in the Sewai area of War Mamund tehsil, where they chanted slogans against the PML-N-led federal government and its allies while waving party flags.
-The protesters said that the 27th Amendment was nothing but an attempt to further destroy the judiciary system in the country.
-Protests staged across Punjab
-In response to the protest call by the PTI and the TTAP, the PTI’s Chief Organiser in Punjab, Aliya Hamza, also instructed her party’s ticket holders to join the movement.
-All party ticket holders, even at the union council level, were instructed to wear black bands, hold pro-democracy and judiciary placards and take out rallies in their areas, she said in a message posted on X.
- 
-
-
-
-
-
-
-By evening, aside from small protests, no big gatherings were reported.
-Hamza posted on X that the protests had been peaceful, with ticket holders, lawyers and the party’s Punjab chapter protesting outside their tehsil courts against the 27th Amendment and the unethical treatment of Imran’s sisters.
-“Participants held protest placards and staged a peaceful demonstration,” she wrote.
- 
-
-
-
-
-
-</p><small>2025-11-21 18:04</small></div><hr><div style='margin-bottom:20px;'><img src='https://i.dawn.com/large/2025/11/2122013219a3d7f.webp' width='100%'><br><a href='https://www.dawn.com/news/1956524/govt-okays-deployment-of-army-civil-armed-forces-for-nov-23-by-elections' target='_blank'><strong>Govt okays deployment of army, civil armed forces for Nov 23 by-elections</strong></a><br><p>The federal government on Friday authorised the deployment of the army and the civil armed forces for the upcoming by-elections on November 23.
-By-polls are due in NA-18 (Haripur), NA-96 (Faisalabad-II), NA-104 (Faisalabad-X), NA-143 (Sahiwal-III), NA-185 (Dera Ghazi Khan-II), NA-129 (Lahore-XIII), PP-73 (Sargodha-III), PP-98 (Faisalabad-I), PP-115 (Faisalabad-XVIII), PP-116 (Faisalabad-XIX), PP-203 (Sahiwal-VI), PP-269 (Muzaffargarh-II) and PP-87 (Mianwali-III) on Sunday.
-The Election Commission of Pakistan (ECP) had sent letters to the federal secretaries of defence and interior on Thursday, requesting them to deploy civil armed forces/army to allow peaceful conduct of polling and also to take other appropriate measures to protect the lives of election officials, voters and the public at large.
-An order, available with Dawn, issued today from the interior ministry said the government authorised the deployment of “sufficient strength” of civil armed forces as second-tier responders on standby in quick reaction force (QRF) mode only and the Pakistan Army as third-tier responders in QRF mode under Articles 220 and 245 of the Constitution.
-It added that the troops were empowered to exercise powers under Sections 4 and 5 of the Anti-Terrorism Act, 1997, from Saturday to Monday.
-“The exact number of troops will be worked out by the respective home departments and Election Commission of Pakistan in consultation with concerned stakeholders on the basis of on ground requirements/assessment,” the order said.
-Faisalabad DMO fines Rana Sanaullah, son-in-law
-Separately, Faisalabad District Monitoring Officer Muhammad Murtaza Malik fined Adviser to the Prime Minister on Political Affairs Rana Sanaullah and his son-in-law, Rana Ahmad Sheheryar, candidate for PS-116, for failing to comply with the code of conduct for the by-polls.
-The DMO’s order said a notice was served to Sanaullah today for violating the code of conduct, but he failed to comply and participated in Shehryar’s election campaign by addressing a public gathering at Nawaz Sharif Park, which was broadcast on electronic and social media.
-The DMO imposed a Rs50,000 fine on him, saying the matter would be referred to the ECP on failure of payment.
-The same fine was imposed on Shehryar for failure to provide a reply to Sanaullah’s participation in his election campaign.</p><small>2025-11-21 17:39</small></div><hr><div style='margin-bottom:20px;'><a href='https://www.geo.tv/latest/634785-war-threat-with-india-still-persists-says-defence-minister' target='_blank'><strong>War threat with India still persists, says defence minister</strong></a><br><p>
+Russia says it has taken control of the city of Kupiansk in northeastern Ukraine and most of Pokrovsk in the east, its first big prizes in nearly two years. Kyiv denies losing control of those cities but has acknowledged that Russia is advancing.</p><small>2025-11-21 18:54</small></div><hr><div style='margin-bottom:20px;'><a href='https://www.geo.tv/latest/634785-war-threat-with-india-still-persists-says-defence-minister' target='_blank'><strong>War threat with India still persists, says defence minister</strong></a><br><p>
 	            	Defence Minister Khawaja Asif speaks during a National Assembly session in Islamabad, on November 14, 2025. — Facebook@NationalAssemblyOfPakistanProxy war remains a modern warfare tool: Khawaja Asif.He says May conflict raised immediate war concerns.Asif says US intervention prevented...</p><small>2025-11-21 17:32</small></div><hr><div style='margin-bottom:20px;'><img src='https://i.dawn.com/large/2025/11/212149460dc3392.webp' width='100%'><br><a href='https://www.dawn.com/news/1956521/13-terrorists-killed-by-security-forces-during-operations-in-kp-ispr' target='_blank'><strong>13 terrorists killed by security forces during operations in KP: ISPR</strong></a><br><p>Security forces killed 13 terrorists during two separate operations in Khyber Pakhtunkhwa, the military’s media wing said in a statement on Friday.
 The Inter-Services Public Relations (ISPR) said in the statement that a joint intelligence-based operation (IBO) was carried out in the Pahar Khel area of Lakki Marwat district, conducted by security forces and the Counter-Terrorism Department (CTD).
 “During the conduct of [the] operation, own troops effectively engaged the khawarij location and after an intense fire exchange, ten khawarij were sent to hell,” the statement read.
@@ -630,55 +650,7 @@ In a separate IBO conducted in Dera Ismail Khan district, three terrorists were 
 “Sanitisation operations are being conducted to eliminate any other Indian sponsored kharji found in the area as [the] relentless counter-terrorism campaign under vision ‘Azm-i-Istehkam’ (as approved by Federal Apex Committee on National Action Plan) by security forces and law enforcement agencies of Pakistan will continue at full pace to wipe out [the] menace of foreign sponsored and supported terrorism from the country.”
 Earlier this week, the ISPR said that 38 terrorists were killed in four separate IBOs conducted over a period of three days in Khyber Pakhtunkhwa.
 Pakistan has witnessed a surge in terror activities, particularly in KP and Balochistan. The spike in terror incidents followed the TTP ending a ceasefire with the government in November 2022 and vowing to attack security forces, police, and personnel of law enforcement agencies.
-Last month, the Islamabad-based think tank Centre for Research and Security Studies said that violence had surged over the past three months due to a spike in militant attacks and intensified counter-terrorism operations.</p><small>2025-11-21 16:49</small></div><hr><div style='margin-bottom:20px;'><img src='https://i.dawn.com/large/2025/11/21202843b34139f.webp' width='100%'><br><a href='https://www.dawn.com/news/1956517/police-detain-protesters-heading-to-karachi-press-club-for-ttaps-protest-against-27th-amendment' target='_blank'><strong>Police detain protesters heading to Karachi Press Club for TTAP’s protest against 27th Amendment</strong></a><br><p>The Karachi police on Friday detained about half a dozen people to prevent them from moving towards the venue of a scheduled protest by the opposition alliance Tehreek Tahafuz Ayeen-i-Pakistan (TTAP), held as part of countrywide demonstrations against the recently passed 27th Constitutional Amendment.
-All roads leading to the Karachi Press Club (KPC) were closed by the police after buses and other heavy vehicles were parked to block access. Contingents of female police personnel were also deployed.
-Some protesters were detained as they attempted to reach KPC. PTI Sindh spokesperson Mohammed Ali Bozdar told Dawn that “more than two dozen protesters” were detained near the KPC.
- 
-
-
-
-
-
-
-Also detained was civil society activist Alifya Sohail, not part of the TTAP protest, who was initially taken to the Artillery Maidan Police Station, where her phone was taken from her and she was not permitted to contact anyone.
-She was subsequently moved to the Women Police Station situated on Sharae Faisal.
- 
-
-
-
-
-
-
-No case was registered against her, nor was there any written complaint against her.
-Sohail has been consistently covering civil society protests, enforced disappearances and activities of rights group Baloch Yakjehti Committee (BYC) in Karachi for several years.
- 
-
-
-
-
-
-
-Journalists and human rights activists called her arrest a serious attack on press freedom and demanded her immediate release.
-The police claimed later in the day that all detainees were released.
- 
-
-
-
-
-
-
-Tehrik-i-Numandagi Awam protest
-The protest organised by the Tehrik-i-Numandagi Awam brought together civil society members, grassroots activists, and lawyers who collectively condemned and rejected the 27th Constitutional Amendment.
-It marked the launch of the platform, which is “a national movement formed to restore the Constitution, defend fundamental rights and re-establish the people’s mandate,” as per a press release issued by the group.
-It was held amid heavy police deployment outside the KPC, where contingents of police could be seen carrying batons.
-Lahore-based academic Dr Ammar Ali Jan, speaking to Dawn, assailed the 27th Amendment, calling it an “affront” to democracy.
-Jan stressed that the “Constitution is a contract between the people and the state,” noting that with the passing of the 27th Amendment, the state was blocking all avenues of “resistance to the system”.
-“Where would a common person go to get justice when you block all legal paths?” he questioned.
-Decrying the amendment, one of the participants, Samrina Hashmi, expressed her frustration over the current state of affairs while speaking to Dawn.
-“I am 65 years old. I am so frustrated. When will I see my country flourish? We have been fighting all our lives against martial law, dictatorship. It seems we are going back to 1958,” she remarked, in an apparent reference to the military coup staged by General Ayub Khan in 1958.
-Organiser Riaz Ahmed told Dawn that the amendment was a “question mark on the state of our judiciary”.
-He called for the annulment of the 26th and the 27th amendments.
-On the matter of resistance against the amendment, Ahmed told Dawn that “there was solid momentum” building against it.</p><small>2025-11-21 16:24</small></div><hr><div style='margin-bottom:20px;'><img src='https://i.dawn.com/large/2025/11/21185617817f4f1.webp' width='100%'><br><a href='https://www.dawn.com/news/1956513/abeyance-of-indus-waters-treaty-presents-real-threat-to-regional-stability-dar-tells-eu' target='_blank'><strong>Abeyance of Indus Waters Treaty presents ‘real threat’ to regional stability, Dar tells EU</strong></a><br><p>Deputy Prime Minister and Foreign Minister Ishaq Dar on Friday reiterated that the “illegal and unilateral” step to hold the Indus Water Treaty (IWT) in abeyance is a “real threat” to regional stability while addressing the Indo-Pacific Ministerial Forum Roundtable in Brussels.
+Last month, the Islamabad-based think tank Centre for Research and Security Studies said that violence had surged over the past three months due to a spike in militant attacks and intensified counter-terrorism operations.</p><small>2025-11-21 16:49</small></div><hr><div style='margin-bottom:20px;'><img src='https://i.dawn.com/large/2025/11/21185617817f4f1.webp' width='100%'><br><a href='https://www.dawn.com/news/1956513/abeyance-of-indus-waters-treaty-presents-real-threat-to-regional-stability-dar-tells-eu' target='_blank'><strong>Abeyance of Indus Waters Treaty presents ‘real threat’ to regional stability, Dar tells EU</strong></a><br><p>Deputy Prime Minister and Foreign Minister Ishaq Dar on Friday reiterated that the “illegal and unilateral” step to hold the Indus Water Treaty (IWT) in abeyance is a “real threat” to regional stability while addressing the Indo-Pacific Ministerial Forum Roundtable in Brussels.
 India in April held the IWT in abeyance following the attack in occupied Kashmir’s Pahalgam that killed 26 — an incident New Delhi blamed on Islamabad without evidence. Pakistan termed any attempt to suspend its water share an “act of war”, noting the IWT had no provision for unilateral suspension. It later said it was considering court action, citing a violation of the 1969 Vienna Convention on the Law of Treaties.
 Speaking at the EU forum in Belgium’s capital today, Dar emphasised that water must be a source of cooperation “and not weaponised for politics”.
 “We believe that durable peace in South Asia cannot be achieved without a peaceful resolution of decades-old Jammu and Kashmir dispute in accordance with relevant United Nations Security Council (UNSC) resolutions and aspirations of Kashmiri people,” Dar said.
@@ -703,6 +675,4 @@ In February 2024, another member of the airline’s cabin crew was reported miss
 	            	People sight moon in this undated image. — ReutersThe moon for the Islamic month of Jamadi ul Sani was not sighted in Pakistan, the Central Ruet-e-Hilal Committee announced on Friday.Chairman Central Ruet-e-Hilal Committee, Maulana Abdul Khabeer Azad, told Geo News that the...</p><small>2025-11-21 14:37</small></div><hr><div style='margin-bottom:20px;'><a href='https://www.geo.tv/latest/634750-cm-afridi-challenges-ecp-summons-on-code-breach-in-phc' target='_blank'><strong>CM Afridi challenges ECP summons on code breach in PHC</strong></a><br><p>
 	            	KP CM Sohail Afridi speaks during an assembly session on October 13, 2025. — APPCM summoned for "attending" campaign event for by-poll.ECP says CM issued "threats to officials and especially voters".Afridi says he did not campaign or violate ECP rules.PESHAWAR: Khyber Pakhtunkhwa...</p><small>2025-11-21 13:11</small></div><hr><div style='margin-bottom:20px;'><a href='https://www.geo.tv/latest/634747-govt-approves-army-civil-armed-forces-deployment-for-nov-23-by-polls' target='_blank'><strong>Govt approves army, civil armed forces deployment for Nov 23 by-polls</strong></a><br><p>
 	            	Pakistan Army soldiers walk alongside a presiding officer  carrying ballot boxes as they come out from the voting materials distribution centre in Rawalpindi. — AFP/FileForces to remain deployed from November 22 to 24.Armed forces empowered under Anti-Terrorism Act.By-elections...</p><small>2025-11-21 12:53</small></div><hr><div style='margin-bottom:20px;'><a href='https://www.geo.tv/latest/634707-french-commander-reveals-secret-behind-air-combat-victory-of-pakistan-over-india-in-may-2025' target='_blank'><strong>French commander confirms Pakistan's air superiority in May 2025 combat with India</strong></a><br><p>
-	            	French commander Captain Jaquis Launay. — Geo NewsPARIS: A French naval commander has confirmed that Indian Rafale fighter jets were shot down during May 2025 air combat with Pakistan, attributing the outcome not to the technological superiority of Chinese J-10C fighters but to...</p><small>2025-11-21 09:12</small></div><hr><div style='margin-bottom:20px;'><a href='https://www.geo.tv/latest/634703-irreconcilable-cm-afridi-urges-punjab-cm-maryam-to-follow-court-orders-on-imran-meetings' target='_blank'><strong>'Irreconcilable': CM Afridi urges Punjab CM Maryam to follow court orders on Imran meetings</strong></a><br><p>
-	            	A collage showing KP CM Sohail Afridi  and Punjab CM Maryam Nawaz. — Facebook@ImMuhammadSohailAfridi/TheMaryamNSharif/FileCM Afridi cites persistent non-implementation of court orders.No conceivable basis for "manhandling" immediate family members.Urges accountability of those...</p><small>2025-11-21 08:06</small></div><hr><div style='margin-bottom:20px;'><a href='https://www.geo.tv/latest/634704-in-maiden-message-as-cj-justice-aminuddin-terms-fcc-creation-a-landmark-in-constitutional-journey' target='_blank'><strong>In maiden message as CJ, Justice Aminuddin terms FCC creation a landmark in constitutional journey</strong></a><br><p>
-	            	President Asif Ali Zardari administers oath to Justice Aminuddin Khan as first CJ of FCC on November 14, 2025. — ReporterCJ Aminuddin outlines FCC's role in upholding Constitution. New website aims to boost transparency and public access: CJ."FCC to approach cases with fairness,...</p><small>2025-11-21 07:54</small></div><hr>
+	            	French commander Captain Jaquis Launay. — Geo NewsPARIS: A French naval commander has confirmed that Indian Rafale fighter jets were shot down during May 2025 air combat with Pakistan, attributing the outcome not to the technological superiority of Chinese J-10C fighters but to...</p><small>2025-11-21 09:12</small></div><hr>
